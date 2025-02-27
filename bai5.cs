@@ -23,6 +23,26 @@ namespace TranQuangThong
       Console.WriteLine($"Point ({X}, {Y} - Color: {Color})");
     }
   }
+  public class Rectangle
+  {
+    public Point UpperLeft { get; set; }
+    public Point BottomRight { get; set; }
+
+    public Rectangle(Point upperLeft, Point bottomRight)
+    {
+        UpperLeft = upperLeft;
+        BottomRight = bottomRight;
+    }
+
+    public void DisplayStatus()
+    {
+        Console.WriteLine("Rectangle Information:");
+        Console.Write("Upper Left: ");
+        UpperLeft.DisplayStatus();
+        Console.Write("Bottom Right: ");
+        BottomRight.DisplayStatus();
+    }
+  }
   class Program
   {
     static void Main()
