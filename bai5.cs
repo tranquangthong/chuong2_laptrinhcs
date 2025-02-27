@@ -47,7 +47,14 @@ namespace TranQuangThong
   {
     static void Main()
     {
-      
+        Point p1 = new Point(2, 3, PointColor.LightBlue);
+        Point p2 = new Point(10, 8, PointColor.BloodRed);
+        Console.WriteLine("Points:");
+        p1.DisplayStatus();
+        p2.DisplayStatus();
+        Rectangle rect = new Rectangle(p1, p2);
+        Console.WriteLine("\nRectangle:");
+        rect.DisplayStatus();
     }
   }
 }
